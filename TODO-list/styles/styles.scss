@@ -1,0 +1,51 @@
+$Playfair: 'Playfair Display', serif;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $Playfair;
+}
+
+body {
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.5rem;
+    align-content: center;
+    box-shadow: 20px 12px 0px #222231;
+    padding: 2rem;
+
+    form {
+        margin: 10px;
+
+        input, button{
+            padding: 0.5rem;
+            border-width: 3px;
+            border-color: #222231;
+            font-weight: bold;
+        }
+    
+        button {
+            cursor: pointer;
+            color: #222231;
+            transition: all 0.3s ease;
+        }
+    
+        button:hover {
+            background: #222231;
+            color: white;
+        }
+    }
+}
+
+.content {
+    margin: 2rem 0;
+    display: grid;
+    grid-template-columns: 200px 1fr 1fr 1fr;
+}
