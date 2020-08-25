@@ -4,6 +4,7 @@ const todoButton = document.querySelector('.todo-button');
 const todoList = document.querySelector('.todo-list');
 const header = document.querySelector('header');
 const todo_on = document.querySelector('todo');
+console.log(todo_on);
 
 
 // Event Listeners

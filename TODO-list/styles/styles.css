@@ -33,6 +33,7 @@ header {
   margin: 2rem 0 0 0;
   -webkit-transition: 1s ease;
   transition: 1s ease;
+  border-style: solid;
 }
 
 header form {
@@ -44,11 +45,14 @@ header form input, header form button {
   border-width: 3px;
   border-color: #222231;
   font-weight: bold;
+  border-style: solid;
+  border-radius: 1.5px;
 }
 
 header form button {
   cursor: pointer;
   color: #222231;
+  border-radius: 1.5px;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
@@ -92,6 +96,7 @@ header select::after {
 .not-blank {
   -webkit-box-shadow: 20px 12px 0px #222231;
           box-shadow: 20px 12px 0px #222231;
+  border-radius: 5px;
 }
 
 .todo-container {
@@ -130,6 +135,7 @@ header select::after {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border-radius: 1.5px;
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
 }
@@ -150,6 +156,7 @@ header select::after {
   cursor: pointer;
   -webkit-transition: 0.3 ease;
   transition: 0.3 ease;
+  border-radius: 1.5px;
 }
 
 .todo-container .todo .trash-btn:focus,
@@ -183,7 +190,7 @@ header select::after {
   -webkit-box-shadow: -20px 12px 0px #3dd8ad;
           box-shadow: -20px 12px 0px #3dd8ad;
   text-decoration: line-through;
-  opacity: 0.5;
+  opacity: 0.6;
 }
 
 .todo-container .fadeOut {
@@ -192,19 +199,16 @@ header select::after {
   opacity: 0;
 }
 
-@media screen and (max-width: 768px) {
-  body
-header {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
+/*
+@media screen and (max-width:768px) {
+    body {
+        margin 0;
+    }
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: ;
+    } 
+}*/
 /*# sourceMappingURL=styles.css.map */

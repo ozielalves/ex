@@ -32,6 +32,7 @@ header {
     padding: 2rem;
     margin: 2rem 0 0 0;
     transition: 1s ease;
+    border-style: solid;
 
     form {
         margin: 10px;
@@ -41,11 +42,14 @@ header {
             border-width: 3px;
             border-color: #222231;
             font-weight: bold;
+            border-style: solid;
+            border-radius: 1.5px;
         }
     
         button {
             cursor: pointer;
             color: #222231;
+            border-radius: 1.5px;
             transition: all 0.3s ease;
             
             &:hover {
@@ -88,6 +92,7 @@ header {
 
 .not-blank{
     box-shadow: 20px 12px 0px #222231;
+    border-radius: 5px;
 }
 
 .todo-container {
@@ -110,6 +115,7 @@ header {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        border-radius: 1.5px;
         transition: all 1s ease;
 
         li {
@@ -125,6 +131,7 @@ header {
             padding: 0.5rem;
             cursor: pointer;
             transition: 0.3 ease;
+            border-radius: 1.5px;
 
             &:focus {
                 outline: none;
@@ -155,7 +162,7 @@ header {
         background-color: #51925a;
         box-shadow: $doneShadow;
         text-decoration: line-through;
-        opacity: 0.5;
+        opacity: 0.6;
     }
 
     .fadeOut {
@@ -164,7 +171,7 @@ header {
     }
 
 }
-
+/*
 @media screen and (max-width:768px) {
     body {
         margin 0;
@@ -175,4 +182,4 @@ header {
         justify-content: center;
         max-width: ;
     } 
-}
+}*/
