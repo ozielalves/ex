@@ -7,16 +7,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="shortcut icon" href="./assets/elipse_logo.svg" type="image/x-icon">
 </head>
 <body>
     <header>
-        <h1>To Do List</h1> 
-        <p>What can't you forget to do?</p>
+        <h1>To Do List</h1>
+        <p>What can't you forget to do today?</p>
         <form>
             <input type="text" class="todo-input">
             <button class="todo-button" type="submit">
                 <i class="fas fa-plus-square"></i>
             </button>
+            <div class="select">
+                <select name="todos" class="filter-todos">
+                    <option value="all">All</option>
+                    <option value="Completed">Completed</option>
+                    <option value="Uncompleted">Uncompleted</option>
+                </select>
+            </div>
         </form>
     </header>
     <div class="todo-container">

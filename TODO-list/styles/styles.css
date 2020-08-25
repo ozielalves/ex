@@ -7,10 +7,12 @@
 }
 
 body {
-  min-height: 100vh;
+  margin: 0 10rem;
+  min-height: 94vh;
 }
 
 header {
+  max-height: 250px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -25,9 +27,12 @@ header {
   font-size: 1.5rem;
   -ms-flex-line-pack: center;
       align-content: center;
-  -webkit-box-shadow: 20px 12px 0px #222231;
-          box-shadow: 20px 12px 0px #222231;
+  -webkit-box-shadow: 0px -100px 0px #222231;
+          box-shadow: 0px -100px 0px #222231;
   padding: 2rem;
+  margin: 2rem 0 0 0;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
 }
 
 header form {
@@ -53,11 +58,153 @@ header form button:hover {
   color: white;
 }
 
-.content {
+header select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
+  border: none;
+}
+
+header .select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+header select {
+  width: 10rem;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 10px 0px #222231;
+          box-shadow: 0px 10px 0px #222231;
+}
+
+header select::after {
+  content: "\25BC";
+  position: absolute;
+  background: #222231;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  pointer-events: none;
+}
+
+.not-blank {
+  -webkit-box-shadow: 20px 12px 0px #222231;
+          box-shadow: 20px 12px 0px #222231;
+}
+
+.todo-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 2rem 0;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 200px 1fr 1fr 1fr;
-      grid-template-columns: 200px 1fr 1fr 1fr;
+  /*grid-template-columns: 200px 1fr 1fr 1fr;*/
+}
+
+.todo-container .todo-list {
+  min-width: 30%;
+  list-style: none;
+}
+
+.todo-container .todo {
+  margin: 1rem 0.5rem 0.5rem 0.5rem;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  background: #ee7600;
+  -webkit-box-shadow: 10px 8px 0px #ffa500;
+          box-shadow: 10px 8px 0px #ffa500;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.todo-container .todo li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.todo-container .todo .trash-btn,
+.todo-container .todo .complete-btn {
+  margin: 3px;
+  border-width: 1px;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  -webkit-transition: 0.3 ease;
+  transition: 0.3 ease;
+}
+
+.todo-container .todo .trash-btn:focus,
+.todo-container .todo .complete-btn:focus {
+  outline: none;
+}
+
+.todo-container .todo .trash-btn {
+  background-color: #800101;
+}
+
+.todo-container .todo .trash-btn:hover {
+  background-color: #a72d2d;
+}
+
+.todo-container .todo .complete-btn {
+  background-color: #3dd8ad;
+}
+
+.todo-container .todo .complete-btn:hover {
+  background-color: #5fe4be;
+}
+
+.todo-container .todo .fa-trash,
+.todo-container .todo .fa-check {
+  pointer-events: none;
+}
+
+.todo-container .completed {
+  background-color: #51925a;
+  -webkit-box-shadow: -20px 12px 0px #3dd8ad;
+          box-shadow: -20px 12px 0px #3dd8ad;
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.todo-container .fadeOut {
+  -webkit-box-shadow: 25px 15px 0px #ffffff;
+          box-shadow: 25px 15px 0px #ffffff;
+  opacity: 0;
+}
+
+@media screen and (max-width: 768px) {
+  body
+header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

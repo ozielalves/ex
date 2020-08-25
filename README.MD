@@ -3,3 +3,5 @@
 > [link para o video](https://www.youtube.com/watch?v=WWZX8RWLxIk)
 
 ## Scss: Scss compiler
+
+## Trigger a one time event: Use {once: true} after the event funciton. 
