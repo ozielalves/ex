@@ -2,10 +2,11 @@ $Playfair: 'Playfair Display', serif;
 $doneShadow: -20px 12px 0px #3dd8ad;
 $todoShadow: 10px 8px 0px #ffa500;
 
-@mixin flexing {
+@mixin flexing($direction) {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: $direction;
 }
 
 * {
@@ -21,18 +22,28 @@ body {
 }
 
 header {
-    max-height: 250px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    @include flexing(column);
+    max-height: 270px;
     text-align: center;
     font-size: 1.5rem;
-    align-content: center;
-    box-shadow: 0px -100px 0px #222231;
+    /*box-shadow: 0px -100px 0px #222231;*/
+    box-shadow: -20px -12px 0px #222231;
     padding: 2rem;
     margin: 2rem 0 0 0;
     transition: 1s ease;
     border-style: solid;
+    border-radius: 5px;
+
+    .title {
+        justify-self: center;
+        display: flex;
+        
+        i {
+            position: relative;
+            align-self: center;
+            margin: 1rem;
+        }
+    }
 
     form {
         margin: 10px;
@@ -69,24 +80,32 @@ header {
         margin: 1rem;
         position: relative;
         overflow: hidden;
-    }
 
-    select {
-        width: 10rem;
-        cursor: pointer;
-        box-shadow: 0px 10px 0px #222231;
-        
-        
         &::after {
             content: "\25BC";
             position: absolute;
-            background: #222231;
             top: 0;
             right: 0;
-            padding: 1rem;
+            padding: 0.1rem;
             pointer-events: none;
+            transition: all 0.3s ease;
         }
 
+        &:hover::after {
+            color: #ffa500;
+        }
+    }
+
+    select {
+        padding: 0.2px;
+        width: 10rem;
+        cursor: pointer;
+        box-shadow: 0px 10px 0px #222231;
+        transition: all 0.3s ease;
+
+        &:hover {
+            box-shadow: 0px 10px 0px #ffa500;
+        }
     }
 }
 
@@ -96,7 +115,7 @@ header {
 }
 
 .todo-container {
-    @include flexing();
+    @include flexing(row);
     margin: 2rem 0;
     /*grid-template-columns: 200px 1fr 1fr 1fr;*/
 
@@ -171,15 +190,22 @@ header {
     }
 
 }
-/*
+
 @media screen and (max-width:768px) {
     body {
-        margin 0;
+        margin: 1.7rem;
+        @include flexing(column);
     }
+
     header {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        max-width: ;
-    } 
-}*/
+        font-size: 1rem;
+        padding: 2rem;
+        margin: 2rem 0 0 0;
+        box-shadow: -20px -12px 0px #222231;
+        border-radius: 5px;
+    }
+
+    .todo-item {
+        font-size: 1rem;
+    }
+}
