@@ -26,7 +26,6 @@ header {
     max-height: 270px;
     text-align: center;
     font-size: 1.5rem;
-    /*box-shadow: 0px -100px 0px #222231;*/
     box-shadow: -20px -12px 0px #222231;
     padding: 2rem;
     margin: 2rem 0 0 0;
@@ -209,6 +208,10 @@ header {
         margin: 2rem 0 0 0;
         box-shadow: -20px -12px 0px #222231;
         border-radius: 5px;
+
+        .todo-input {
+            width: 150px;
+        }
     }
 
     .todo {
@@ -226,3 +229,19 @@ header {
         }
     }
 }
+
+@media screen and (max-width: 320px) {
+    header {
+        width:  230px;
+
+        .fa-stream {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    body {
+        @include flexing(column);
+    }
+}    
