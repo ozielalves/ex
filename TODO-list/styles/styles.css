@@ -28,7 +28,6 @@ header {
   max-height: 270px;
   text-align: center;
   font-size: 1.5rem;
-  /*box-shadow: 0px -100px 0px #222231;*/
   -webkit-box-shadow: -20px -12px 0px #222231;
           box-shadow: -20px -12px 0px #222231;
   padding: 2rem;
@@ -265,6 +264,9 @@ header select:hover {
             box-shadow: -20px -12px 0px #222231;
     border-radius: 5px;
   }
+  header .todo-input {
+    width: 150px;
+  }
   .todo {
     max-width: 330px;
   }
@@ -276,6 +278,33 @@ header select:hover {
   .todo-container .completed {
     -webkit-box-shadow: -15px 12px 0px #3dd8ad;
             box-shadow: -15px 12px 0px #3dd8ad;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  header {
+    width: 230px;
+  }
+  header .fa-stream {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 /*# sourceMappingURL=styles.css.map */
