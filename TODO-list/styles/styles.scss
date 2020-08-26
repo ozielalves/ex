@@ -139,6 +139,7 @@ header {
 
         li {
             flex: 1;
+            margin-right: 0.5rem;
         }
 
         .trash-btn,
@@ -177,6 +178,11 @@ header {
         }
     }
 
+    .todo-item {
+        max-width: 770px;
+        overflow-wrap: break-word;
+    }
+
     .completed {
         background-color: #51925a;
         box-shadow: $doneShadow;
@@ -205,7 +211,18 @@ header {
         border-radius: 5px;
     }
 
-    .todo-item {
-        font-size: 1rem;
+    .todo {
+        max-width: 330px;
+
+        .todo-item {
+            font-size: 1rem;
+            max-width: 235px;
+            overflow-wrap: break-word;
+        }
+    }
+    .todo-container{
+        .completed {
+            box-shadow: -15px 12px 0px #3dd8ad;
+        }
     }
 }

@@ -179,6 +179,7 @@ header select:hover {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  margin-right: 0.5rem;
 }
 
 .todo-container .todo .trash-btn,
@@ -220,6 +221,11 @@ header select:hover {
   pointer-events: none;
 }
 
+.todo-container .todo-item {
+  max-width: 770px;
+  overflow-wrap: break-word;
+}
+
 .todo-container .completed {
   background-color: #51925a;
   -webkit-box-shadow: -20px 12px 0px #3dd8ad;
@@ -259,8 +265,17 @@ header select:hover {
             box-shadow: -20px -12px 0px #222231;
     border-radius: 5px;
   }
-  .todo-item {
+  .todo {
+    max-width: 330px;
+  }
+  .todo .todo-item {
     font-size: 1rem;
+    max-width: 235px;
+    overflow-wrap: break-word;
+  }
+  .todo-container .completed {
+    -webkit-box-shadow: -15px 12px 0px #3dd8ad;
+            box-shadow: -15px 12px 0px #3dd8ad;
   }
 }
 /*# sourceMappingURL=styles.css.map */
