@@ -1,0 +1,4 @@
+// What I wanna transpile
+{
+  "presets": ["@babel/preset-react", "@babel/preset-env"]
+}
