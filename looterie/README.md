@@ -1,18 +1,18 @@
 # React App Initiation
 
 ## Props: An important React concept
-We can use it like that when calling the component:
-`<Component prop1={something1} prop2={something2}/>`
-The prop can be used on the component like below:
+We can use it like that when calling the component:<br/>
+`<Component prop1={something1} prop2={something2}/>`<br/>
+The prop can be used on the component like below:<br/>
 `const Component = (props) => { {props.prop1} };`
 
 ## State: To modify any variable (Speed purposes)
-> The Vanilla JS
+- The Vanilla JS:<br/>
 `let counter;`
-> React.js
-`const [counter, setCounter] = useState(0);`
+- React.js:<br/>
+`const [counter, setCounter] = useState(0);`<br/>
 `cosnt [toggle, setToggle] = useState(false);`
- - With `useState` we will have access to the `prev` value of counter
+ - With `useState` we will have access to the `prev` value of counter<br/>
 
 
 
