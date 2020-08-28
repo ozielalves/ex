@@ -1,0 +1,35 @@
+$baseColor: #CB9B77;
+$titleColor: #E0DAD7;
+$textColor: #E1D4D7;
+$hoverColor: #003F6C;
+
+
+@mixin flexing ($direction: row, $justification: center, $alignment: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justification;
+  align-items: $alignment;
+}
+
+
+#page-intro {
+  height: 100vh;
+  background: url('../../assets/Bolinhas-home-mobile.png') no-repeat bottom;
+  @include flexing(column);
+
+  ul {
+    @include flexing(row, space-between, center);
+
+    li {
+      list-style: none;
+      color: $baseColor;
+      font-size: 1.5rem;
+      margin: 1rem;
+    }
+  }
+
+  form {
+    @include flexing(column,space-between,center)
+  }
+  
+}

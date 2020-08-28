@@ -1,11 +1,12 @@
 import React from 'react';
 import './App.css';
+import Intro from './pages/Intro/Intro';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Roi, letícia.</h1>
-    </div>
+    <>
+    <Intro />
+    </>
   );
 }
 
